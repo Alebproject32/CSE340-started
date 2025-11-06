@@ -11,6 +11,11 @@ const env = require("dotenv").config()
 const app = express()
 const static = require("./routes/static")
 
+/* ***************************************
+ * Middleware to static files
+*****************************************/
+app.use(express.static("public")) // a new path to explore the develop before run in Render
+
 /* ************************** 
 * "View Engine and Templates"
 ****************************/
@@ -22,7 +27,6 @@ app.set("layout", "./layouts/layout") // not at views root
  * Routes
  *************************/
 app.use(static)
-app.use(express.static("public"))
 // Index route
 app.get("/", function(req, res){
   res.render("index", {title: "Home"})})
