@@ -4,3 +4,46 @@
 *:after {
   box-sizing: border-box;
 }
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  #top-header {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    }
+
+.sitename {
+  margin-right: auto;
+  }
+
+#tools {
+  margin-left: auto;
+  }
+
+}
+
+/* PC view */
+@media screen and (min-width: 768px) {
+  #top-header {
+    max-width: 1200px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+
+.sitename {
+  margin-right: auto;
+  }
+
+#tools {
+  margin-left: auto;
+  }
+}
