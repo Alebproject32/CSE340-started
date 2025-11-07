@@ -30,7 +30,7 @@ body {
     max-width: 1200px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border: 1px solid var(--primary-dark);
-    margin: 75px;
+    margin: 75px auto;
     border-radius: 5px;
 }
 
@@ -44,6 +44,17 @@ body {
 a {
     color: var(--accent-color);
     text-decoration: none;
+}
+
+img {
+    max-width: 100%; 
+    height: auto;
+}
+
+.main-content img {
+    max-width: 90%; 
+    display: block;
+    margin: 5 auto;
 }
 
 /*************************************************
@@ -120,6 +131,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 10px;
 }
 
 .review-container {
@@ -127,6 +139,15 @@ nav {
     padding: 15px;
 }
 
+#wrapper {
+    background-color: var(--primary-light);
+    width: 95%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--primary-dark);
+    margin: 75px auto;
+    border-radius: 5px;
+}
 
 
 /*************************************************
@@ -162,6 +183,7 @@ footer {
     .main-content {
         flex-direction: row;
         gap: 40px;
+        align-items: center;
     }
     
     .main-content section {
