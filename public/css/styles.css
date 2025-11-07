@@ -22,6 +22,12 @@ body {
     color: var(--text-dark);
 }
 
+#square {
+  border-color: var(--primary-dark);
+  border-radius: 2px;
+  margin: 100px;
+}
+
 /* Utility to Center Main Content */
 #site-container {
     width: 95%;
@@ -46,15 +52,22 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+    }
 
-#top-header .sitename a, 
-#top-header #tools a {
+#top-header .sitename a {
     color: var(--text-light);
-    font-size: 1.1em;
+    font-size: 2.0em;
     font-weight: bold;
     padding: 0 10px;
-}
+    margin: 20px;
+    }
+
+  #tools a {
+      color: var(--text-light);
+      font-size: 1.1em;
+      padding: 0 10px;
+      margin: 20px;
+    }
 
 /*************************************************
  * 2. NAVIGATION BAR STYLES
@@ -85,6 +98,7 @@ nav {
     text-decoration: none;
     padding: 10px 0;
     display: block;
+    
 }
 
 /*************************************************
@@ -106,6 +120,8 @@ nav {
     border: 1px solid var(--text-light);
     padding: 15px;
 }
+
+
 
 /*************************************************
  * 4. FOOTER STYLES
@@ -147,12 +163,53 @@ footer {
     }
 
     .upgrades-container {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
     }
     
-    .upgrades-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+
+
+    #left #right {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
     }
+
+      .upgrades-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 15px; 
+        padding: 0;
+        margin: 0;
+        list-style: none; 
+    }
+
+
+  .upgrade-item {
+      background-color: var(--primary-light); 
+      border: 1px solid var(--accent-color); 
+      padding: 5px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+
+  .upgrade-item img {
+      max-width: 50px; 
+      height: auto;
+      margin-bottom: 5px;
+  }
+
+  .upgrades-section {
+        flex: 1; 
+    }
+
+    .reviews-section ul li {
+      margin-bottom: 25px;
+      
+    }
+    
 }
